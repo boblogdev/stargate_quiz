@@ -1,3 +1,33 @@
 body {
-    background-color: black;
+  background-image: url('../images/milkyway.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
 }
+
+.body-overlay {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+
+.header-logo img {
+  max-height: 150px;
+}
+
+
+
+
+
+/* Colors
+
+Delft Blue: #2D3A58;
+Goldenrod: #E2AC16;
+Cal Poly Green: #215415;
+Dark Green: #1C361E;
+Eerie Black: #1D1D1D;
+
+*/
