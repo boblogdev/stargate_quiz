@@ -1,3 +1,7 @@
+/* Import Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap');
+
 body {
   background-image: url('../images/milkyway.jpg');
   background-repeat: no-repeat;
@@ -10,25 +14,51 @@ body {
 .body-overlay {
   min-height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
 }
 
 
 .header-logo img {
-  max-height: 120px;
+  max-height: 100px;
 }
 
+.sg-heading {
+ font-family: 'Lora', serif;
+ color: white;
+ text-transform: uppercase;
+ margin-bottom: 20px; 
+ text-shadow: 3px 1px #e2ac16;
+}
+
+.sg-text {
+  font-family: 'Lora', serif;
+  color: white;
+}
 /* Game Area */
 
 .game-area {
   width: 100%;
-  height: 1000px;
+  height: 400px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 25px;
+  margin-bottom: 20px;
 }
 
+.buttons-container {
+ width: 200px;
+ margin: 0 auto;
+ top: 100px;
+ position: relative;
+}
 
+.game-btn {
+  min-width: 150px;
+  margin: auto;
+  margin-bottom: 15px;
+  font-family: 'Lora', serif;
+  text-transform: uppercase;
+}
 
 /* Colors
 
