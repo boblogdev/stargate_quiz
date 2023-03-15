@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stargate SG1 Quiz</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <!-- Body Overlay -->
-<div class="body-overlay"></div>
+    <div class="body-overlay"></div>
     <!-- Header Logo -->
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="header-logo">
-                    <img class="mx-auto d-block img-fluid my-5" src="assets/images/stargate-earth-symbol.png" >
+                    <img class="mx-auto d-block img-fluid my-5" src="assets/images/stargate-earth-symbol.png">
                 </div>
             </div>
         </div>
@@ -36,11 +39,41 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto game-area">
-                    <div class="buttons-container d-flex flex-column justify-content-center">
-                        <button type="button" id="start-btn" class="game-btn btn btn-success">Start Quiz</button>
-                        <button type="button"  id="difficulty-btn" class="game-btn btn btn-danger">Easy Mode</button>
-                        <button type="button" id="instruction-btn" class="game-btn btn btn-warning">Instructions</button>
+                <div class="buttons-container d-flex flex-column justify-content-center">
+                    <button type="button" id="start-btn" class="game-btn btn btn-success">Start Quiz</button>
+                    <button type="button" id="difficulty-btn" class="game-btn btn btn-danger">Easy Mode</button>
+                    <!-- Modal Toggle -->
+                    <button type="button" id="instruction-btn" data-toggle="modal" data-target="#instructionsModal"class="game-btn btn btn-warning">Instructions</button>
+                    <!-- Bootstrap Modal -->
+                    <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Game Intructions</h5>
+                                    
+                                </div>
+                                <div class="modal-body">
+                                    <ol>
+                                        <li>There are 10 questions to answer, on the subject of the TV series Stargate SG-1.</li>
+                                        <li>It is a multiple choice quiz</li>
+                                        <li>Once you click on your answer, that answer is final and will go either red(wrong answer) or (green)</li>
+                                        <li>If you select the wrong answer, the correct answer will flash green.</li>
+                                        <li>You can change the difficulty mode from easy to hard from the main menu.</li>
+                                        <li>You can reset the game to the beginning using the reset button.</li>
+                                    </ol>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
@@ -57,5 +90,16 @@
             </footer>
         </div>
     </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
+
 </body>
+
 </html>
