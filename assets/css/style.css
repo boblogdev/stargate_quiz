@@ -65,9 +65,15 @@ body {
 /* Footer */
 footer {
   height: 100px;
-  
 }
 
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color:#e2ac16;
+}
 .social-icons {
   min-height: 30px;
   color: white;
@@ -77,6 +83,8 @@ footer {
 .social-icons i {
   padding: 5px;
 }
+
+
 /* Colors
 
 Delft Blue: #2D3A58;
