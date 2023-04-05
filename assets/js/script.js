@@ -86,4 +86,74 @@ const easyQuestions = [
       choices: ["The Dial Home Device (DHD)", "The Holodeck", "The Tardis", "The DeLorean"],
       answer: 0
     }
-]
+];
+
+// Create questions object like array with hardQuestions
+
+const hardQuestions = [  
+    {
+    question: "What is the name of the episode where Daniel ascends to a higher plane of existence?",   
+    choices: ["Meridian", "Ascension", "The Fifth Race", "Surrender"],
+    answer: 0
+  },
+  {
+    question: "What is the name of the planet where the SG1 team discovers the 'super-soldier' program?",
+    choices: ["P5S-117", "P9C-882", "P3X-666", "P60"],
+    answer: 1
+  },
+  {
+    question: "What is the name of the advanced technology that the Ori use to convert people to their religion?",
+    choices: ["The Priors' Staff", "The Book of Origin", "The Ark of Truth", "Wololo"],
+    answer: 0
+  },
+  {
+    question: "What is the name of the episode where SG1 travels to an alternate universe where Earth is under attack by the Goa'uld?",
+    choices: ["Point of View", "Ripple Effect", "There But for the Grace of God", "Rise of the Cybermen"],
+    answer: 2
+  },
+  {
+    question: "What is the name of the planet where SG1 encounters the Re'tu, a race of beings that can possess human hosts?",
+    choices: ["P3X-593", "P2X-338", "P9C-882", "P45"],
+    answer: 1
+  },
+  {
+    question: "What is the name of the episode where SG1 travels back in time to ancient Egypt?",
+    choices: ["Moebius", "The Curse", "Forever in a Day", "Backwards"],
+    answer: 0
+  },
+  {
+    question: "What is the name of the episode where SG1 discovers a civilization that has created a virtual reality world?",
+    choices: ["The Gamekeeper", "Avatar", "Unending", "Endgame"],
+    answer: 1
+  },
+  {
+    question: "What is the name of the device that SG1 uses to interface with the Asgard's computer systems?",
+    choices: ["The Ancient Repository of Knowledge", "The Asgard Computer Core", "The Human-Machine Interface", "The Cortana Interface"],
+    answer: 0
+  },
+  {
+    question: "What is the name of the episode where SG1 must stop a rogue NID team from using the Stargate for personal gain?",
+    choices: ["Touchstone", "Shades of Grey", "Chain Reaction", "Lower Decks"],
+    answer: 1
+  },
+  {
+    question: "What is the name of the Goa'uld who is responsible for the destruction of the planet Abydos?",
+    choices: ["Sokar", "Hathor", "Anubis", "Seth"],
+    answer: 2
+  },
+  {
+    question: "What is the name of the episode where SG1 teams up with the Jaffa rebellion to destroy a Goa'uld mothership?",
+    choices: ["The Serpent's Venom", "Exodus", "Full Circle", "Revenge is Sweet"],
+    answer: 0
+  },
+  {
+    question: "What is the name of the episode where SG1 teams up with the Tok'ra to rescue Jacob Carter from a Goa'uld extraction ceremony?",
+    choices: ["The Devil You Know", "Divide and Conquer", "Tangent", "No Man Left Behind"],
+    answer: 0
+  },
+  {
+    question: "What is the name of the episode where SG1 investigates a planet where the inhabitants believe that they are all living in a virtual reality?",
+    choices: ["The Gamekeeper", "Avatar", "Unending", "To Boldly Go"],
+    answer: 1
+  }
+];
