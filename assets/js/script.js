@@ -164,12 +164,13 @@ const hardQuestions = [
 let gameBtns = document.getElementById("game-buttons");
 let startQuiz = document.getElementById("start-btn");
 let difficultyBtn = document.getElementById("difficulty-btn");
-let gameArea = document.getElementById("gameHUD");
+let gameArea = document.getElementById("game-hud");
 
 
 // Event Listener on start quiz button
 
 startQuiz.addEventListener("click", clearGameArea);
+startQuiz.addEventListener("click", popGameArea);
 difficultyBtn.addEventListener("click", diffToggle);
 
 // Toggle Difficulty 
@@ -191,7 +192,7 @@ function clearGameArea () {
 // Populate the game area
 
 function popGameArea () {
-  gameHUD.classList = "show";
+  gameArea.classList = "show";
 
 }
 
