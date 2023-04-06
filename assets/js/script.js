@@ -171,6 +171,7 @@ let gameArea = document.getElementById("game-hud");
 
 startQuiz.addEventListener("click", clearGameArea);
 startQuiz.addEventListener("click", popGameArea);
+startQuiz.addEventListener("click", countdown);
 difficultyBtn.addEventListener("click", diffToggle);
 
 // Toggle Difficulty 
@@ -196,5 +197,23 @@ function popGameArea () {
 
 }
 
+// Countdown Timer 
+  // Set initial countdown time
+  function countdown() {
+let countDownTime = 10;
+  // get elements from DOM
+let timerElement = document.getElementById("timer");
+// Update the countdown each second 
+let countdown = setInterval(function () {
+  timerElement.innerHTML = countDownTime + " seconds left";
+  // Decrement the countdown time by 1 second
+  countDownTime--;
 
+  // Stop the countdown timer when it reaches 0 or provide another function
 
+  if(countDownTime < 0) {
+    clearInterval(countdown);
+    timerElement.innerHTML = "GAME OVER"
+  }
+} ,1000)
+  }
