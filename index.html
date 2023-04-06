@@ -41,7 +41,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto game-area">
-                <div class="buttons-container d-flex flex-column justify-content-center">
+                <div id="game-buttons" class="buttons-container d-flex flex-column justify-content-center">
                     <button type="button" id="start-btn" class="game-btn btn btn-success">Start Quiz</button>
                     <button type="button" id="difficulty-btn" class="game-btn btn btn-danger">Easy Mode</button>
                     <!-- Modal Toggle -->
@@ -72,6 +72,15 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div id="gameHUD" class="hidden">
+                    <div id="timer"></div>
+                    <div id="question"></div>
+                    <div id="choicesContainer">
+                        <ul id="choice">
+                        
+                        </ul>
                     </div>
                 </div>
             </div>
