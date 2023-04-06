@@ -157,3 +157,43 @@ const hardQuestions = [
     answer: 1
   }
 ];
+
+
+// Get elements from the DOM
+
+let gameBtns = document.getElementById("game-buttons");
+let startQuiz = document.getElementById("start-btn");
+let difficultyBtn = document.getElementById("difficulty-btn");
+let gameArea = document.getElementById("gameHUD");
+
+
+// Event Listener on start quiz button
+
+startQuiz.addEventListener("click", clearGameArea);
+difficultyBtn.addEventListener("click", diffToggle);
+
+// Toggle Difficulty 
+
+function diffToggle() {
+  if (difficultyBtn.textContent === "Easy Mode") {
+    difficultyBtn.textContent = "Hard Mode";
+  } else {
+    difficultyBtn.textContent = "Easy Mode";
+  }
+}
+
+// Clear the Game Area
+
+function clearGameArea () {
+  gameBtns.classList = "hidden";
+}
+
+// Populate the game area
+
+function popGameArea () {
+  gameHUD.classList = "show";
+
+}
+
+
+
