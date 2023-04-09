@@ -159,20 +159,62 @@ const hardQuestions = [
 ];
 
 
+// Global Variables
+
+let correctAnswer = 0;
+let incorrectAnswer = 0;
+let difficulty = "Easy";
+let timer = 10;
+let questions = {};
+let maxQuestions = 10;
+
+
 // Get elements from the DOM
 
-let gameBtns = document.getElementById("game-buttons");
+  // assigns game-buttons to gameBtns to hide later
+let clearMenuBtns = document.getElementById("game-buttons");
+  // assigns start-button to startQuiz for later use
 let startQuiz = document.getElementById("start-btn");
+  // assigns difficulty-btn to difficultyBtn to allow toggling
 let difficultyBtn = document.getElementById("difficulty-btn");
+  // assigns game-hud to gameArea to unhide later
 let gameArea = document.getElementById("game-hud");
+
+// quiz elements DOM
+let questionElement = document.getElementById("question");
+let choiceElement = document.getElementById("choice"); 
 
 
 // Event Listener on start quiz button
 
-startQuiz.addEventListener("click", clearGameArea);
-startQuiz.addEventListener("click", popGameArea);
-startQuiz.addEventListener("click", countdown);
+startQuiz.addEventListener("click", startGame);
 difficultyBtn.addEventListener("click", diffToggle);
+
+
+// Clear GameButtons
+
+function hideGameArea () {
+  clearMenuBtns.classList = "hidden";
+}
+
+// reset the game variables(global) to ensure no errors
+
+function resetGame() {
+  correctAnswer = 0;
+  incorrectAnswer = 0;
+  difficulty = "Easy";
+  timer = 10;
+  questions = {};
+  maxQuestions = 10;
+}
+
+// startGame function 
+
+function startGame () {
+  countdown();
+  hideGameArea();
+  popGameArea();
+}
 
 // Toggle Difficulty 
 
@@ -184,12 +226,6 @@ function diffToggle() {
   }
 }
 
-// Clear the Game Area
-
-function clearGameArea () {
-  gameBtns.classList = "hidden";
-}
-
 // Populate the game area
 
 function popGameArea () {
@@ -199,7 +235,7 @@ function popGameArea () {
 
 // Countdown Timer 
   // Set initial countdown time
-  function countdown() {
+  function countdown(timer) {
 let countDownTime = 10;
   // get elements from DOM
 let timerElement = document.getElementById("timer");
