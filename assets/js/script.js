@@ -180,10 +180,6 @@ let difficultyBtn = document.getElementById("difficulty-btn");
   // assigns game-hud to gameArea to unhide later
 let gameArea = document.getElementById("game-hud");
 
-// quiz elements DOM
-let questionElement = document.getElementById("question");
-let choiceElement = document.getElementById("choice"); 
-
 
 // Event Listener on start quiz button
 
@@ -253,3 +249,16 @@ let countdown = setInterval(function () {
   }
 } ,1000)
   }
+
+
+// quiz elements DOM
+let questionElement = document.getElementById("question");
+let choiceElement = document.getElementById("choice"); 
+
+// randomize easy Questions
+
+let randomEasyQuestion = easyQuestions[Math.floor(Math.random() * easyQuestions.length)];
+
+// Display the random Easy Question
+
+questionElement.textContent = randomEasyQuestion.question;
