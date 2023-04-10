@@ -260,5 +260,17 @@ let choiceElement = document.getElementById("choice");
 let randomEasyQuestion = easyQuestions[Math.floor(Math.random() * easyQuestions.length)];
 
 // Display the random Easy Question
-
 questionElement.textContent = randomEasyQuestion.question;
+
+// Loop through randomEasyQuestion Choices
+randomEasyQuestion.choices.forEach(choice => {
+  // Create a list item
+  let choiceLi = document.createElement("li");
+  // Create new button
+  let newButton = document.createElement("button");
+  // Change newButtons text content to randomEasyQuestion.textContent choice
+  newButton.textContent = choice;
+
+choiceLi.appendChild(newButton);
+choiceElement.appendChild(choiceLi);
+});
