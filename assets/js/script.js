@@ -210,6 +210,7 @@ function startGame () {
   countdown();
   hideGameArea();
   popGameArea();
+  displayEasyQuestion();
 }
 
 // Toggle Difficulty 
@@ -257,20 +258,40 @@ let choiceElement = document.getElementById("choice");
 
 // randomize easy Questions
 
-let randomEasyQuestion = easyQuestions[Math.floor(Math.random() * easyQuestions.length)];
+function displayEasyQuestion() {
+  let randomEasyQuestion = easyQuestions[Math.floor(Math.random() * easyQuestions.length)];
+  // resets Choices
+  choiceElement.innerHTML = "";
 
-// Display the random Easy Question
-questionElement.textContent = randomEasyQuestion.question;
+  // Display the random Easy Question
+  questionElement.textContent = randomEasyQuestion.question;
 
-// Loop through randomEasyQuestion Choices
-randomEasyQuestion.choices.forEach(choice => {
-  // Create a list item
-  let choiceLi = document.createElement("li");
-  // Create new button
-  let newButton = document.createElement("button");
-  // Change newButtons text content to randomEasyQuestion.textContent choice
-  newButton.textContent = choice;
+  // Loop through randomEasyQuestion Choices
+  randomEasyQuestion.choices.forEach((choice, index) => {
+    // Create a list item
+    let choiceLi = document.createElement("li");
+    // Create new button
+    let answerBtn = document.createElement("button");
+    // Change newButtons text content to randomEasyQuestion.textContent choice
+    answerBtn.textContent = choice;
+    answerBtn.addEventListener("click", () => {
+      // Check choices.choice index matches answer
+      if (index === randomEasyQuestion.answer) {
+        console.log("Correct");
+        answerBtn.style.backgroundColor = "green";
+        // increment correctAnswer
+        correctAnswer++;
+      } else {
+        console.log("Incorrect");
+        answerBtn.style.backgroundColor = "red";
+        // increment incorrectAnswer
+        incorrectAnswer++; 
+      }
+    
+    displayEasyQuestion();
+    });
 
-choiceLi.appendChild(newButton);
-choiceElement.appendChild(choiceLi);
-});
+    choiceLi.appendChild(answerBtn);
+    choiceElement.appendChild(choiceLi);
+  });
+};
