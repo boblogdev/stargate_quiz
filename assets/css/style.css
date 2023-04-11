@@ -77,8 +77,26 @@ ul#choice {
   padding: 0;
 }
 
+ul#choice li {
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul#choice li button {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 320px;
+}
+
 #timer {
   margin-top: 20px;
+  background-color: #1c1c1c;
+}
+
+#question {
+  min-height: 75px;
+  
 }
 
 /* Footer */
