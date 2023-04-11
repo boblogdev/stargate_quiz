@@ -273,6 +273,7 @@ function displayEasyQuestion() {
     // Create new button
     let answerBtn = document.createElement("button");
     // Change newButtons text content to randomEasyQuestion.textContent choice
+    answerBtn.classList.add("btn-warning")
     answerBtn.textContent = choice;
     answerBtn.addEventListener("click", () => {
       // Check choices.choice index matches answer
@@ -281,11 +282,17 @@ function displayEasyQuestion() {
         answerBtn.style.backgroundColor = "green";
         // increment correctAnswer
         correctAnswer++;
+        // display correctCounter
+        let correctCountElement = document.getElementById("correct-count");
+        correctCountElement.innerText = correctAnswer.toString();
       } else {
         console.log("Incorrect");
         answerBtn.style.backgroundColor = "red";
         // increment incorrectAnswer
         incorrectAnswer++; 
+        // display incorrectCounter
+        let incorrectCountElement = document.getElementById("incorrect-count");
+        incorrectCountElement.innerText = incorrectAnswer.toString();
       }
     
     displayEasyQuestion();
