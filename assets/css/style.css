@@ -68,7 +68,13 @@ body {
   width: 100%;
   height: 400px;
   margin-top: 20px;
-  background-color: red;
+  font-family: 'Lora', sans-serif;
+  color: white;
+}
+
+ul#choice {
+  list-style-type: none;
+  padding: 0;
 }
 
 #timer {
