@@ -163,34 +163,54 @@ const hardQuestions = [
 
 let correctAnswer = 0;
 let incorrectAnswer = 0;
-let difficulty = "Easy";
+let isEasyMode = true;
 let timer = 10;
 let questions = {};
 let maxQuestions = 10;
 
 
-// Get elements from the DOM
+// GameMenuBtns container
+let gameMenuBtns = document.getElementById("game-buttons");
 
-  // assigns game-buttons to gameBtns to hide later
-let clearMenuBtns = document.getElementById("game-buttons");
-  // assigns start-button to startQuiz for later use
+// Start Quiz Button
 let startQuiz = document.getElementById("start-btn");
-  // assigns difficulty-btn to difficultyBtn to allow toggling
+
+// Game HUD Div
+let gameHud = document.getElementById("game-hud");
+
+
+// Difficulty Toggle Event and click function
 let difficultyBtn = document.getElementById("difficulty-btn");
-  // assigns game-hud to gameArea to unhide later
-let gameArea = document.getElementById("game-hud");
+difficultyBtn.addEventListener("click", () => {
+  isEasyMode = !isEasyMode;
+  difficultyBtn.textContent = isEasyMode ? "Easy Mode" : "Hard Mode";
+});
 
 
-// Event Listener on start quiz button
+// Listen for event on startQuiz button call startGame function
 
 startQuiz.addEventListener("click", startGame);
-difficultyBtn.addEventListener("click", diffToggle);
+
+function startGame() {
+  runSteps([
+    countdown,
+    hideGameArea,
+    popGameArea,
+    displayEasyQuestion
+  ]);
+}
+
+function runSteps(steps) {
+  steps.forEach(step => step());
+}
+
+
 
 
 // Clear GameButtons
 
 function hideGameArea () {
-  clearMenuBtns.classList = "hidden";
+  gameMenuBtns.classList = "hidden";
 }
 
 // reset the game variables(global) to ensure no errors
@@ -204,29 +224,11 @@ function resetGame() {
   maxQuestions = 10;
 }
 
-// startGame function 
-
-function startGame () {
-  countdown();
-  hideGameArea();
-  popGameArea();
-  displayEasyQuestion();
-}
-
-// Toggle Difficulty 
-
-function diffToggle() {
-  if (difficultyBtn.textContent === "Easy Mode") {
-    difficultyBtn.textContent = "Hard Mode";
-  } else {
-    difficultyBtn.textContent = "Easy Mode";
-  }
-}
 
 // Populate the game area
 
 function popGameArea () {
-  gameArea.classList = "show";
+  gameHud.classList = "show";
 
 }
 
