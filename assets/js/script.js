@@ -193,8 +193,8 @@ startQuiz.addEventListener("click", startGame);
 
 function startGame() {
   runSteps([
-    countdown,
     hideGameArea,
+    countdown,
     popGameArea,
     displayEasyQuestion
   ]);
@@ -204,33 +204,16 @@ function runSteps(steps) {
   steps.forEach(step => step());
 }
 
-
-
-
-// Clear GameButtons
-
+// Hide the menu buttons in game are
 function hideGameArea () {
   gameMenuBtns.classList = "hidden";
 }
 
-// reset the game variables(global) to ensure no errors
-
-function resetGame() {
-  correctAnswer = 0;
-  incorrectAnswer = 0;
-  difficulty = "Easy";
-  timer = 10;
-  questions = {};
-  maxQuestions = 10;
-}
-
-
-// Populate the game area
-
+// Show the Game Hud ready for gameplay
 function popGameArea () {
   gameHud.classList = "show";
-
 }
+
 
 // Countdown Timer 
   // Set initial countdown time
