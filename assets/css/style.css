@@ -90,8 +90,10 @@ ul#choice li button {
 }
 
 #timer {
-  margin-top: 20px;
-  background-color: #1c1c1c;
+  height: 48px;
+  padding-top: 10px;
+  max-width: 320px;
+  background-color: #2D3A58;
 }
 
 #question {
