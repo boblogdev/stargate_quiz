@@ -1,3 +1,4 @@
+
 // Create questions object like array with easyQuestions
 
 const easyQuestions = [
@@ -196,7 +197,7 @@ function startGame() {
     hideGameArea,
     countdown,
     popGameArea,
-    displayEasyQuestion
+    checkQuestion
   ]);
 }
 
@@ -236,6 +237,15 @@ let countdown = setInterval(function () {
 } ,1000)
   }
 
+// Check difficulty load questions
+
+function checkQuestion() {
+  if(isEasyMode) {
+    displayEasyQuestion();
+  } else {
+    displayHardQuestion();
+  }
+}
 
 // quiz elements DOM
 let questionElement = document.getElementById("question");
@@ -293,3 +303,57 @@ function displayEasyQuestion() {
     choiceElement.appendChild(choiceLi);
   });
 };
+
+// randomize easy Questions
+
+function displayHardQuestion() {
+  let randomHardQuestion = hardQuestions[Math.floor(Math.random() * hardQuestions.length)];
+  // resets Choices
+  choiceElement.innerHTML = "";
+
+  // Display the random Easy Question
+  questionElement.textContent = randomHardQuestion.question;
+
+  // Loop through randomEasyQuestion Choices
+  randomHardQuestion.choices.forEach((choice, index) => {
+    // Create a list item
+    let choiceLi = document.createElement("li");
+    // Create new button
+    let answerBtn = document.createElement("button");
+    // Change newButtons text content to randomEasyQuestion.textContent choice
+    answerBtn.classList.add("btn-warning")
+    answerBtn.textContent = choice;
+    answerBtn.addEventListener("click", () => {
+      // Check choices.choice index matches answer
+      if (index === randomHardQuestion.answer) {
+        console.log("Correct");
+        answerBtn.style.backgroundColor = "green";
+        // increment correctAnswer
+        correctAnswer++;
+        // display correctCounter
+        let correctCountElement = document.getElementById("correct-count");
+        correctCountElement.innerText = correctAnswer.toString();
+      } else {
+        console.log("Incorrect");
+        answerBtn.style.backgroundColor = "red";
+        // increment incorrectAnswer
+        incorrectAnswer++; 
+        // display incorrectCounter
+        let incorrectCountElement = document.getElementById("incorrect-count");
+        incorrectCountElement.innerText = incorrectAnswer.toString();
+      }
+
+
+      setTimeout(function () {
+        
+        displayHardQuestion();
+      }, 1000);
+        
+      
+    });
+
+    choiceLi.appendChild(answerBtn);
+    choiceElement.appendChild(choiceLi);
+  });
+};
+
