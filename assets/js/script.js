@@ -24,7 +24,7 @@ const easyQuestions = [
     {
       question: "What is the name of the advanced technology that SG1 acquires from the Asgard, allowing them to travel vast distances instantly?",
       choices: ["Warp Drive", "Combustion", "Steam", "The Asgard Hyperdrive"],
-      answer: 4
+      answer: 3
     },
     {
       question: "What is the name of the ancient Egyptian deity that the Goa'uld often pose as in Stargate SG1?",
