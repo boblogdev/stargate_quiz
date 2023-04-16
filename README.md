@@ -4,6 +4,8 @@ For my milestone project, I have chosen to create a quiz game focused on Stargat
 
 I plan to utilize the knowledge and experience gained from Milestone 1, which involved HTML/CSS and Bootstrap, to construct this project. In addition, I will build upon this foundation by incorporating JavaScript, thereby demonstrating my proficiency in this particular area of study.
 
+The site comprises a single page that displays certain elements at specific junctures during gameplay, while concealing others. In retrospect, it might have been more prudent to divide the site into three separate pages, one for showcasing the buttons, another for displaying the gameHud, and a third for presenting the scoreboard.
+
 ## Table of Contents: 
 
 - [User Experience](#)
@@ -54,3 +56,22 @@ Representing both the Goa'uld (specifically the uniforms and ships) and the Taur
 3. **Imagery** 
 
 Most of the imagery has been used, will have a sci-fi element to it. The Chappa'ai(Stargate) will be a prominent image on the quiz app/site.
+
+Edit: At the project's outset, I made the conscious decision to avoid incorporating any images that might be subject to copyright infringement. Consequently, I opted to employ a background image from Unsplash and placed a solitary Stargate logo at the screen's apex.  
+
+4. **Wireframes** 
+
+| Desktop First Page | Desktop Game| Desktop Faq |
+| ------- | ------- | ------- |
+| <img src="assets/docs/wireframes/desktop.png" width="200" height="150"> | <img src="assets/docs/wireframes/desktop_game.png" width="200" height="150"> | <img src="assets/docs/wireframes/desktop_faq.png" width="200" height="150"> |
+
+| Mobile First Page| Mobile Game| Mobile Faq |
+| ------- | ------- | ------- |
+| <img src="assets/docs/wireframes/mobile_first_page.png" width="200" height="150"> | <img src="assets/docs/wireframes/mobile_first_game.png" width="200" height="150"> | <img src="assets/docs/wireframes/mobile_first_faq.png" width="200" height="150"> |
+|         |         |         |
+
+
+| Tablet First Page| Tablet Game| Tablet Faq |
+| ------- | ------- | ------- |
+| <img src="assets/docs/wireframes/tablet.png" width="200" height="150"> | <img src="assets/docs/wireframes/tablet_game.png" width="200" height="150"> | <img src="assets/docs/wireframes/tablet_faq.png" width="200" height="150"> |
+|         |         |         |
