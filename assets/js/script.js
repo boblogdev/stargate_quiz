@@ -180,6 +180,10 @@ let startQuiz = document.getElementById("start-btn");
 // Game HUD Div
 let gameHud = document.getElementById("game-hud");
 
+// Gamescore
+
+let gamescore = document.getElementById("injectScore");
+
 
 // Difficulty Toggle Event and click function
 let difficultyBtn = document.getElementById("difficulty-btn");
@@ -220,7 +224,7 @@ function popGameArea () {
 // Countdown Timer 
   // Set initial countdown time
   function countdown(timer) {
-let countDownTime = 1;
+let countDownTime = 30;
   // get elements from DOM
 let timerElement = document.getElementById("timer");
 // Update the countdown each second 
@@ -365,5 +369,6 @@ function displayScoreboard() {
   gameHud.classList = "hidden";
   let scoreboard = document.getElementById("scoreboard");
   scoreboard.classList.remove("hidden");
+  injectScore.innerHTML = correctAnswer;
 }
 
