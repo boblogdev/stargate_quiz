@@ -96,7 +96,12 @@ ul#choice li button {
 
 #question {
   min-height: 75px;
-  
+}
+
+#scoreboard {
+  font-family: 'Lora', sans-serif;
+  color: white;
+  text-transform: uppercase;
 }
 
 /* Footer */

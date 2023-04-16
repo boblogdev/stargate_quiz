@@ -170,6 +170,7 @@ let questions = {};
 let maxQuestions = 10;
 
 
+
 // GameMenuBtns container
 let gameMenuBtns = document.getElementById("game-buttons");
 
@@ -219,7 +220,7 @@ function popGameArea () {
 // Countdown Timer 
   // Set initial countdown time
   function countdown(timer) {
-let countDownTime = 30;
+let countDownTime = 1;
   // get elements from DOM
 let timerElement = document.getElementById("timer");
 // Update the countdown each second 
@@ -232,7 +233,7 @@ let countdown = setInterval(function () {
 
   if(countDownTime < 0) {
     clearInterval(countdown);
-    timerElement.innerHTML = "GAME OVER"
+    displayScoreboard();
   }
 } ,1000)
   }
@@ -356,4 +357,13 @@ function displayHardQuestion() {
     choiceElement.appendChild(choiceLi);
   });
 };
+
+// Display the scoreboard
+
+function displayScoreboard() {
+  score = correctAnswer + incorrectAnswer;
+  gameHud.classList = "hidden";
+  let scoreboard = document.getElementById("scoreboard");
+  scoreboard.classList.remove("hidden");
+}
 
