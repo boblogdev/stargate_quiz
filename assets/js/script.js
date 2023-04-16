@@ -218,7 +218,7 @@ function popGameArea () {
 // Countdown Timer 
   // Set initial countdown time
   function countdown(timer) {
-let countDownTime = 10;
+let countDownTime = 30;
   // get elements from DOM
 let timerElement = document.getElementById("timer");
 // Update the countdown each second 
@@ -279,8 +279,14 @@ function displayEasyQuestion() {
         let incorrectCountElement = document.getElementById("incorrect-count");
         incorrectCountElement.innerText = incorrectAnswer.toString();
       }
-    
-    displayEasyQuestion();
+
+
+      setTimeout(function () {
+        
+        displayEasyQuestion();
+      }, 1000);
+        
+      
     });
 
     choiceLi.appendChild(answerBtn);
