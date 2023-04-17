@@ -75,7 +75,7 @@ const easyQuestions = [
     {
       question: "What is the name of the Goa'uld who serves as the main villain during the final two seasons of SG1?",
       choices: ["Zeus", "Seth", "Horus", "Ba'al"],
-      answer: "Ba'al"
+      answer: 3
     },
     {
       question: "What is the name of the organization that oversees Stargate Command and the SG teams?",
