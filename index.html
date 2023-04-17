@@ -97,7 +97,9 @@
                                 <p>Correct: <span id="correct-count">0</span></p>
                             </div>
                             <div id="reset-game-btn" class="col-lg-4 text-center">
-                                <button class="btn btn-reset" onclick="resetmyGame()">Reset Game</button>
+                                <a href="index.html">
+                                <button class="btn btn-danger">Reset Game</button>
+                            </a>
                             </div>
                             <div id="incorrect-answer-div" class="col-lg-4 text-center">
                                 <p>Incorrect: <span id="incorrect-count">0</span></p>
@@ -110,8 +112,22 @@
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <p class="scoretext">
-                                You have scored <span id="injectScore"></span>.
+                                You scored <span id="correct-score-count"></span> correct
                             </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p class="scoretext">
+                                You scored <span id="incorrect-score-count"></span> incorrect
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 mx-auto text-center">
+                            <a href="index.html">
+                            <button class="btn btn-danger">Reset Game</button>
+                        </a>
                         </div>
                     </div>
                 </div>

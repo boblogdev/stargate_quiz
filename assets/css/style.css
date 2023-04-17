@@ -41,7 +41,7 @@ body {
 
 .game-area {
   width: 100%;
-  min-height: 500px;
+  min-height: 600px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   margin-bottom: 30px;
@@ -93,7 +93,6 @@ ul#choice li button {
   height: 48px;
   padding-top: 10px;
   max-width: 320px;
-  background-color: #2D3A58;
 }
 
 #question {
@@ -106,6 +105,16 @@ ul#choice li button {
   text-transform: uppercase;
 }
 
+.scoretext {
+  font-size: 2rem;
+}
+
+#correct-score-count {
+  color: green;
+}
+#incorrect-score-count {
+  color: red;
+}
 /* Footer */
 footer {
   height: 100px;
