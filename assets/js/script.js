@@ -165,9 +165,7 @@ const hardQuestions = [
 let correctAnswer = 0;
 let incorrectAnswer = 0;
 let isEasyMode = true;
-let timer = 10;
-let questions = {};
-let maxQuestions = 10;
+
 
 
 
@@ -180,10 +178,14 @@ let startQuiz = document.getElementById("start-btn");
 // Game HUD Div
 let gameHud = document.getElementById("game-hud");
 
-// Gamescore
+// Correct Score Count Element
+let correctScoreCount = document.getElementById("correct-score-count");
 
-let gamescore = document.getElementById("injectScore");
+// Incorrect Score Count Element
+let incorrectScoreCount = document.getElementById("incorrect-score-count");
 
+// Scoreboard Element
+let scoreboard = document.getElementById("scoreboard");
 
 // Difficulty Toggle Event and click function
 let difficultyBtn = document.getElementById("difficulty-btn");
@@ -365,10 +367,9 @@ function displayHardQuestion() {
 // Display the scoreboard
 
 function displayScoreboard() {
-  score = correctAnswer + incorrectAnswer;
   gameHud.classList = "hidden";
-  let scoreboard = document.getElementById("scoreboard");
   scoreboard.classList.remove("hidden");
-  injectScore.innerHTML = correctAnswer;
+  correctScoreCount.innerHTML = correctAnswer;
+  incorrectScoreCount.innerHTML = incorrectAnswer;
 }
 
