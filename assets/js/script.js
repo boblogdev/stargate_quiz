@@ -277,14 +277,14 @@ function displayEasyQuestion() {
     answerBtn.addEventListener("click", () => {
       // Check choices.choice index matches answer
       if (index === randomEasyQuestion.answer) {
-        answerBtn.style.backgroundColor = "green";
+        answerBtn.className = "btn-success";
         // increment correctAnswer
         correctAnswer++;
         // display correctCounter
         let correctCountElement = document.getElementById("correct-count");
         correctCountElement.innerText = correctAnswer.toString();
       } else {
-        answerBtn.style.backgroundColor = "red";
+       answerBtn.className = "btn-danger";
         // increment incorrectAnswer
         incorrectAnswer++;
         // display incorrectCounter
@@ -328,14 +328,14 @@ function displayHardQuestion() {
     answerBtn.addEventListener("click", () => {
       // Check choices.choice index matches answer
       if (index === randomHardQuestion.answer) {
-        answerBtn.style.backgroundColor = "green";
+        answerBtn.className = "btn-success";
         // increment correctAnswer
         correctAnswer++;
         // display correctCounter
         let correctCountElement = document.getElementById("correct-count");
         correctCountElement.innerText = correctAnswer.toString();
       } else {
-        answerBtn.style.backgroundColor = "red";
+        answerBtn.className = "btn-danger";
         // increment incorrectAnswer
         incorrectAnswer++;
         // display incorrectCounter
