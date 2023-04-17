@@ -41,7 +41,7 @@ body {
 
 .game-area {
   width: 100%;
-  min-height: 600px;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   margin-bottom: 30px;
@@ -50,8 +50,6 @@ body {
 .buttons-container {
  width: 200px;
  margin: 0 auto;
- top: 100px;
- position: relative;
 }
 
 .game-btn {
@@ -66,8 +64,7 @@ body {
 
 #game-hud {
   width: 100%;
-  height: 400px;
-  margin-top: 20px;
+  height: 100%;
   font-family: 'Lora', sans-serif;
   color: white;
 }
@@ -107,6 +104,7 @@ ul#choice li button {
 
 .scoretext {
   font-size: 2rem;
+  padding: 10px;
 }
 
 #correct-score-count {
@@ -148,12 +146,8 @@ footer a:hover {
 }
 
 
-/* Colors
-
-Delft Blue: #2D3A58;
-Goldenrod: #E2AC16;
-Cal Poly Green: #215415;
-Dark Green: #1C361E;
-Eerie Black: #1D1D1D;
-
-*/
+/* Bootstrap Overrides */
+.btn-success {
+  background-color: #1f8136;
+  border-color: #1f8136;;
+}
