@@ -1,3 +1,4 @@
+
 // Create questions object like array with easyQuestions
 
 const easyQuestions = [
@@ -24,7 +25,7 @@ const easyQuestions = [
     {
       question: "What is the name of the advanced technology that SG1 acquires from the Asgard, allowing them to travel vast distances instantly?",
       choices: ["Warp Drive", "Combustion", "Steam", "The Asgard Hyperdrive"],
-      answer: 4
+      answer: 3
     },
     {
       question: "What is the name of the ancient Egyptian deity that the Goa'uld often pose as in Stargate SG1?",
@@ -169,6 +170,7 @@ let questions = {};
 let maxQuestions = 10;
 
 
+
 // GameMenuBtns container
 let gameMenuBtns = document.getElementById("game-buttons");
 
@@ -177,6 +179,10 @@ let startQuiz = document.getElementById("start-btn");
 
 // Game HUD Div
 let gameHud = document.getElementById("game-hud");
+
+// Gamescore
+
+let gamescore = document.getElementById("injectScore");
 
 
 // Difficulty Toggle Event and click function
@@ -196,7 +202,7 @@ function startGame() {
     hideGameArea,
     countdown,
     popGameArea,
-    displayEasyQuestion
+    checkQuestion
   ]);
 }
 
@@ -218,7 +224,7 @@ function popGameArea () {
 // Countdown Timer 
   // Set initial countdown time
   function countdown(timer) {
-let countDownTime = 10;
+let countDownTime = 30;
   // get elements from DOM
 let timerElement = document.getElementById("timer");
 // Update the countdown each second 
@@ -231,11 +237,20 @@ let countdown = setInterval(function () {
 
   if(countDownTime < 0) {
     clearInterval(countdown);
-    timerElement.innerHTML = "GAME OVER"
+    displayScoreboard();
   }
 } ,1000)
   }
 
+// Check difficulty load questions
+
+function checkQuestion() {
+  if(isEasyMode) {
+    displayEasyQuestion();
+  } else {
+    displayHardQuestion();
+  }
+}
 
 // quiz elements DOM
 let questionElement = document.getElementById("question");
@@ -279,11 +294,81 @@ function displayEasyQuestion() {
         let incorrectCountElement = document.getElementById("incorrect-count");
         incorrectCountElement.innerText = incorrectAnswer.toString();
       }
-    
-    displayEasyQuestion();
+
+
+      setTimeout(function () {
+        
+        displayEasyQuestion();
+      }, 1000);
+        
+      
     });
 
     choiceLi.appendChild(answerBtn);
     choiceElement.appendChild(choiceLi);
   });
 };
+
+// randomize easy Questions
+
+function displayHardQuestion() {
+  let randomHardQuestion = hardQuestions[Math.floor(Math.random() * hardQuestions.length)];
+  // resets Choices
+  choiceElement.innerHTML = "";
+
+  // Display the random Easy Question
+  questionElement.textContent = randomHardQuestion.question;
+
+  // Loop through randomEasyQuestion Choices
+  randomHardQuestion.choices.forEach((choice, index) => {
+    // Create a list item
+    let choiceLi = document.createElement("li");
+    // Create new button
+    let answerBtn = document.createElement("button");
+    // Change newButtons text content to randomEasyQuestion.textContent choice
+    answerBtn.classList.add("btn-warning")
+    answerBtn.textContent = choice;
+    answerBtn.addEventListener("click", () => {
+      // Check choices.choice index matches answer
+      if (index === randomHardQuestion.answer) {
+        console.log("Correct");
+        answerBtn.style.backgroundColor = "green";
+        // increment correctAnswer
+        correctAnswer++;
+        // display correctCounter
+        let correctCountElement = document.getElementById("correct-count");
+        correctCountElement.innerText = correctAnswer.toString();
+      } else {
+        console.log("Incorrect");
+        answerBtn.style.backgroundColor = "red";
+        // increment incorrectAnswer
+        incorrectAnswer++; 
+        // display incorrectCounter
+        let incorrectCountElement = document.getElementById("incorrect-count");
+        incorrectCountElement.innerText = incorrectAnswer.toString();
+      }
+
+
+      setTimeout(function () {
+        
+        displayHardQuestion();
+      }, 1000);
+        
+      
+    });
+
+    choiceLi.appendChild(answerBtn);
+    choiceElement.appendChild(choiceLi);
+  });
+};
+
+// Display the scoreboard
+
+function displayScoreboard() {
+  score = correctAnswer + incorrectAnswer;
+  gameHud.classList = "hidden";
+  let scoreboard = document.getElementById("scoreboard");
+  scoreboard.classList.remove("hidden");
+  injectScore.innerHTML = correctAnswer;
+}
+

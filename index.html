@@ -45,7 +45,7 @@
                     <button type="button" id="start-btn" class="game-btn btn btn-success">Start Quiz</button>
                     <button type="button" id="difficulty-btn" class="game-btn btn btn-danger">Easy Mode</button>
                     <!-- Modal Toggle -->
-                    <button type="button" id="instruction-btn" data-toggle="modal" data-target="#instructionsModal"class="game-btn btn btn-warning">Instructions</button>
+                    <button type="button" id="instruction-btn" data-toggle="modal" data-target="#instructionsModal" class="game-btn btn btn-warning">Instructions</button>
                     <!-- Bootstrap Modal -->
                     <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
@@ -102,6 +102,16 @@
                             <div id="incorrect-answer-div" class="col-lg-4 text-center">
                                 <p>Incorrect: <span id="incorrect-count">0</span></p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Game Scoreboard -->
+                <div id="scoreboard" class="container hidden mt-5">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p class="scoretext">
+                                You have scored <span id="injectScore"></span>.
+                            </p>
                         </div>
                     </div>
                 </div>
