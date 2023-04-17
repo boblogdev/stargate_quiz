@@ -280,7 +280,6 @@ function displayEasyQuestion() {
     answerBtn.addEventListener("click", () => {
       // Check choices.choice index matches answer
       if (index === randomEasyQuestion.answer) {
-        console.log("Correct");
         answerBtn.style.backgroundColor = "green";
         // increment correctAnswer
         correctAnswer++;
@@ -288,7 +287,6 @@ function displayEasyQuestion() {
         let correctCountElement = document.getElementById("correct-count");
         correctCountElement.innerText = correctAnswer.toString();
       } else {
-        console.log("Incorrect");
         answerBtn.style.backgroundColor = "red";
         // increment incorrectAnswer
         incorrectAnswer++; 
@@ -311,29 +309,28 @@ function displayEasyQuestion() {
   });
 };
 
-// randomize easy Questions
+// randomize Hard Questions
 
 function displayHardQuestion() {
   let randomHardQuestion = hardQuestions[Math.floor(Math.random() * hardQuestions.length)];
   // resets Choices
   choiceElement.innerHTML = "";
 
-  // Display the random Easy Question
+  // Display the randomHardQuestion
   questionElement.textContent = randomHardQuestion.question;
 
-  // Loop through randomEasyQuestion Choices
+  // Loop through randomHardQuestion Choices
   randomHardQuestion.choices.forEach((choice, index) => {
     // Create a list item
     let choiceLi = document.createElement("li");
     // Create new button
     let answerBtn = document.createElement("button");
-    // Change newButtons text content to randomEasyQuestion.textContent choice
+    // Change newButtons text content to randomHardQuestion.textContent choice
     answerBtn.classList.add("btn-warning")
     answerBtn.textContent = choice;
     answerBtn.addEventListener("click", () => {
       // Check choices.choice index matches answer
       if (index === randomHardQuestion.answer) {
-        console.log("Correct");
         answerBtn.style.backgroundColor = "green";
         // increment correctAnswer
         correctAnswer++;
@@ -341,7 +338,6 @@ function displayHardQuestion() {
         let correctCountElement = document.getElementById("correct-count");
         correctCountElement.innerText = correctAnswer.toString();
       } else {
-        console.log("Incorrect");
         answerBtn.style.backgroundColor = "red";
         // increment incorrectAnswer
         incorrectAnswer++; 
@@ -350,6 +346,7 @@ function displayHardQuestion() {
         incorrectCountElement.innerText = incorrectAnswer.toString();
       }
 
+      
 
       setTimeout(function () {
         
