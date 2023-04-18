@@ -64,75 +64,75 @@ const easyQuestions = [{
     answer: 1,
     choices: ["Dr Raj Koothrapalli", "Dr Samantha Carter", "Dr Crusher", "Dr Bob"],
     question: "What is the name of the SG1 team member who is an astrophysicist and serves as the main scientific advisor for the team?"
-  }]
+  }];
 
 // Create questions object like array with hardQuestions
 
 const hardQuestions = [{
-    answer: 0,    
+    answer: 0,
     choices: ["Meridian", "Ascension", "The Fifth Race", "Surrender"],
-    question: "What is the name of the episode where Daniel ascends to a higher plane of existence?",
+    question: "What is the name of the episode where Daniel ascends to a higher plane of existence?"
   },
   {
     answer: 1,
     choices: ["P5S-117", "P9C-882", "P3X-666", "P60"],
-    question: "What is the name of the planet where the SG1 team discovers the 'super-soldier' program?",
+    question: "What is the name of the planet where the SG1 team discovers the 'super-soldier' program?"
   },
   {
     answer: 0,
     choices: ["The Priors' Staff", "The Book of Origin", "The Ark of Truth", "Wololo"],
-    question: "What is the name of the advanced technology that the Ori use to convert people to their religion?",
+    question: "What is the name of the advanced technology that the Ori use to convert people to their religion?"
   },
   {
     answer: 2,
     choices: ["Point of View", "Ripple Effect", "There But for the Grace of God", "Rise of the Cybermen"],
-    question: "What is the name of the episode where SG1 travels to an alternate universe where Earth is under attack by the Goa'uld?",
+    question: "What is the name of the episode where SG1 travels to an alternate universe where Earth is under attack by the Goa'uld?"
   },
   {
     answer: 1,
     choices: ["P3X-593", "P2X-338", "P9C-882", "P45"],
-    question: "What is the name of the planet where SG1 encounters the Re'tu, a race of beings that can possess human hosts?",
+    question: "What is the name of the planet where SG1 encounters the Re'tu, a race of beings that can possess human hosts?"
   },
   {
     answer: 0,
     choices: ["Moebius", "The Curse", "Forever in a Day", "Backwards"],
-    question: "What is the name of the episode where SG1 travels back in time to ancient Egypt?",
+    question: "What is the name of the episode where SG1 travels back in time to ancient Egypt?"
   },
   {
     answer: 1,
     choices: ["The Gamekeeper", "Avatar", "Unending", "Endgame"],
-    question: "What is the name of the episode where SG1 discovers a civilization that has created a virtual reality world?",
+    question: "What is the name of the episode where SG1 discovers a civilization that has created a virtual reality world?"
   },
   {
     answer: 0,
     choices: ["The Ancient Repository of Knowledge", "The Asgard Computer Core", "The Human-Machine Interface", "The Cortana Interface"],
-    question: "What is the name of the device that SG1 uses to interface with the Asgard's computer systems?",
+    question: "What is the name of the device that SG1 uses to interface with the Asgard's computer systems?"
   },
   {
     answer: 1,
     choices: ["Touchstone", "Shades of Grey", "Chain Reaction", "Lower Decks"],
-    question: "What is the name of the episode where SG1 must stop a rogue NID team from using the Stargate for personal gain?",
+    question: "What is the name of the episode where SG1 must stop a rogue NID team from using the Stargate for personal gain?"
   },
   {
     answer: 2,
     choices: ["Sokar", "Hathor", "Anubis", "Seth"],
-    question: "What is the name of the Goa'uld who is responsible for the destruction of the planet Abydos?",
+    question: "What is the name of the Goa'uld who is responsible for the destruction of the planet Abydos?"
   },
   {
     answer: 0,
     choices: ["The Serpent's Venom", "Exodus", "Full Circle", "Revenge is Sweet"],
-    question: "What is the name of the episode where SG1 teams up with the Jaffa rebellion to destroy a Goa'uld mothership?",
+    question: "What is the name of the episode where SG1 teams up with the Jaffa rebellion to destroy a Goa'uld mothership?"
   },
   {
     answer: 0,
     choices: ["The Devil You Know", "Divide and Conquer", "Tangent", "No Man Left Behind"],
-    question: "What is the name of the episode where SG1 teams up with the Tok'ra to rescue Jacob Carter from a Goa'uld extraction ceremony?",
+    question: "What is the name of the episode where SG1 teams up with the Tok'ra to rescue Jacob Carter from a Goa'uld extraction ceremony?"
   },
   {
     answer: 1,
     choices: ["The Gamekeeper", "Avatar", "Unending", "To Boldly Go"],
-    question: "What is the name of the episode where SG1 investigates a planet where the inhabitants believe that they are all living in a virtual reality?",
-  }]
+    question: "What is the name of the episode where SG1 investigates a planet where the inhabitants believe that they are all living in a virtual reality?"
+  }];
 
 // Global Variables
 
@@ -163,9 +163,9 @@ let scoreboard = document.getElementById("scoreboard");
 
 // Difficulty Toggle Event and click function
 let difficultyBtn = document.getElementById("difficulty-btn");
-difficultyBtn.addEventListener("click", () => {
+difficultyBtn.addEventListener("click", function () {
   isEasyMode = !isEasyMode;
-  difficultyBtn.textContent = isEasyMode ? "Easy Mode" : "Hard Mode";
+  difficultyBtn.textContent = (isEasyMode ? "Easy Mode" : "Hard Mode");
 });
 
 
@@ -176,7 +176,7 @@ startQuiz.addEventListener("click", startGame);
 function startGame() {
   runSteps([
     hideGameArea,
-    countdown,
+    countdownTimer,
     popGameArea,
     checkQuestion
   ]);
@@ -197,17 +197,14 @@ function popGameArea() {
 }
 
 
-// Countdown Timer 
-// Set initial countdown time
-function countdown(timer) {
+// Countdown Timer
+function countdownTimer() {
   let countDownTime = 30;
-  // get elements from DOM
   let timerElement = document.getElementById("timer");
-  // Update the countdown each second 
   let countdown = setInterval(function () {
     timerElement.innerHTML = countDownTime + " seconds left";
     // Decrement the countdown time by 1 second
-    countDownTime--;
+    countDownTime -= 1;
 
     // Stop the countdown timer when it reaches 0 or provide another function
 
@@ -215,7 +212,7 @@ function countdown(timer) {
       clearInterval(countdown);
       displayScoreboard();
     }
-  }, 1000)
+  }, 1000);
 }
 
 // Check difficulty load questions
@@ -243,27 +240,27 @@ function displayEasyQuestion() {
   questionElement.textContent = randomEasyQuestion.question;
 
   // Loop through randomEasyQuestion Choices
-  randomEasyQuestion.choices.forEach((choice, index) => {
+  randomEasyQuestion.choices.forEach(function(choice, index) {
     // Create a list item
     let choiceLi = document.createElement("li");
     // Create new button
     let answerBtn = document.createElement("button");
     // Change newButtons text content to randomEasyQuestion.textContent choice
-    answerBtn.classList.add("btn-warning")
+    answerBtn.classList.add("btn-warning");
     answerBtn.textContent = choice;
-    answerBtn.addEventListener("click", () => {
+    answerBtn.addEventListener("click", function() {
       // Check choices.choice index matches answer
       if (index === randomEasyQuestion.answer) {
         answerBtn.className = "btn-success";
         // increment correctAnswer
-        correctAnswer++;
+        correctAnswer += 1;
         // display correctCounter
         let correctCountElement = document.getElementById("correct-count");
         correctCountElement.innerText = correctAnswer.toString();
       } else {
        answerBtn.className = "btn-danger";
         // increment incorrectAnswer
-        incorrectAnswer++;
+        incorrectAnswer += 1;
         // display incorrectCounter
         let incorrectCountElement = document.getElementById("incorrect-count");
         incorrectCountElement.innerText = incorrectAnswer.toString();
@@ -294,7 +291,7 @@ function displayHardQuestion() {
   questionElement.textContent = randomHardQuestion.question;
 
   // Loop through randomHardQuestion Choices
-  randomHardQuestion.choices.forEach((choice, index) => {
+  randomHardQuestion.choices.forEach(function(choice, index) {
     // Create a list item
     let choiceLi = document.createElement("li");
     // Create new button
@@ -302,22 +299,22 @@ function displayHardQuestion() {
     // Change newButtons text content to randomHardQuestion.textContent choice
     answerBtn.classList.add("btn-warning");
     answerBtn.textContent = choice;
-    answerBtn.addEventListener("click", () => {
+    answerBtn.addEventListener("click", function() {
       // Check choices.choice index matches answer
       if (index === randomHardQuestion.answer) {
         answerBtn.className = "btn-success";
         // increment correctAnswer
-        correctAnswer++;
+        correctAnswer += 1;
         // display correctCounter
         let correctCountElement = document.getElementById("correct-count");
-        correctCountElement.innerText = correctAnswer.toString();
+        correctCountElement.innerText = correctAnswer;
       } else {
         answerBtn.className = "btn-danger";
         // increment incorrectAnswer
-        incorrectAnswer++;
+        incorrectAnswer += 1;
         // display incorrectCounter
         let incorrectCountElement = document.getElementById("incorrect-count");
-        incorrectCountElement.innerText = incorrectAnswer.toString();
+        incorrectCountElement.innerText = incorrectAnswer;
       }
 
 
