@@ -1,161 +1,138 @@
 // Create questions object like array with easyQuestions
 
 const easyQuestions = [{
-    question: "What is the name of the alien race that originally built the Stargates in Stargate SG1?",
-    choices: ["The Ancients", "The Goa'uld", "The Tau'ri", "The Asgard"],
-    answer: 0
+   answer: 0,
+   choices: ["The Ancients", "The Goa'uld", "The Tau'ri", "The Asgard"],
+   question: "What is the name of the alien race that originally built the Stargates in Stargate SG1?"
   },
   {
-    question: "What is the name of the primary protagonist in Stargate SG1?",
+    answer: 1,
     choices: ["Ba'al", "Colonel Jack O'Neill", "Jacob Carter", "Radek Zelenka"],
-    answer: 1
+    question: "What is the name of the primary protagonist in Stargate SG1?"
   },
   {
-    question: "What is the name of the planet where the SG1 team first meets the Goa'uld, Apophis?",
+    answer: 1,
     choices: ["Earth", "Chulak", "P3X-988", "Mars"],
-    answer: 1
+    question: "What is the name of the planet where the SG1 team first meets the Goa'uld, Apophis?"
   },
   {
-    question: "Who is the SG1 team's main nemesis throughout most of the series?",
+    answer: 0,
     choices: ["The Goa'uld", "The Ori", "The Jaffa", "Humanity"],
-    answer: 0
+    question: "Who is the SG1 team's main nemesis throughout most of the series?"
   },
   {
-    question: "What is the name of the advanced technology that SG1 acquires from the Asgard, allowing them to travel vast distances instantly?",
+    answer: 3,
     choices: ["Warp Drive", "Combustion", "Steam", "The Asgard Hyperdrive"],
-    answer: 3
+    question: "What is the name of the advanced technology that SG1 acquires from the Asgard, allowing them to travel vast distances instantly?"
   },
   {
-    question: "What is the name of the ancient Egyptian deity that the Goa'uld often pose as in Stargate SG1?",
+    answer: 3,
     choices: ["Ragnarok", "Hathor", "Yu", "Ra"],
-    answer: 3
+    question: "What is the name of the ancient Egyptian deity that the Goa'uld often pose as in Stargate SG1?"
   },
   {
-    question: "Who is the leader of the Tok'ra, the rebel faction of the Goa'uld who oppose the System Lords?",
+    answer: 0,
     choices: ["Jacob Carter / Selmak", "Jean-Luc Picard", "Johnny Rico", "Diz"],
-    answer: 0
+    question: "Who is the leader of the Tok'ra, the rebel faction of the Goa'uld who oppose the System Lords?"
   },
   {
-    question: "What is the name of the planet that the SG1 team travels to in the episode 'Window of Opportunity,' where they become trapped in a time loop?",
+    answer: 2,
     choices: ["Pluto", "Andromeda", "P4X-639", "The Moon"],
-    answer: 2
+    question: "What is the name of the planet that the SG1 team travels to in the episode 'Window of Opportunity,' where they become trapped in a time loop?"
   },
   {
-    question: "What is the name of the planet where the SG1 team discovers the Lost City of the Ancients?",
+    answer: 3,
     choices: ["Mars", "Venus", "Earth", "Atlantis"],
-    answer: 3
+    question: "What is the name of the planet where the SG1 team discovers the Lost City of the Ancients?"
   },
   {
-    question: "Who is the first main character to leave the SG1 team?",
+    answer: 3,
     choices: ["Data", "Jean Rasczak", "Logan", "Dr. Daniel Jackson"],
-    answer: 3
+    question: "Who is the first main character to leave the SG1 team?"
   },
   {
-    question: "What is the name of the Earth ship that serves as the primary mode of transportation for SG1?",
+    answer: 1,
     choices: ["USS Enterprise", "The Prometheus", "Vorlon Cruiser", "Thargoid Mothership"],
-    answer: 1
+    question: "What is the name of the Earth ship that serves as the primary mode of transportation for SG1?"
   },
   {
-    question: "What is the name of the device that allows SG1 to communicate across vast distances via a subspace field?",
+    answer: 0,
     choices: ["The Long-range communication device (LRC)", "Walkie Talkies", "DHD", "Short Range Thermometer"],
-    answer: 0
+    question: "What is the name of the device that allows SG1 to communicate across vast distances via a subspace field?"
   },
   {
-    question: "What is the name of the SG1 team member who is an astrophysicist and serves as the main scientific advisor for the team?",
+    answer: 1,
     choices: ["Dr Raj Koothrapalli", "Dr Samantha Carter", "Dr Crusher", "Dr Bob"],
-    answer: 1
-  },
-  {
-    question: "What is the name of the planet where SG1 first encounters the Replicators?",
-    choices: ["P3X-489", "Coruscant", "Dagobah", "Hala"],
-    answer: 3
-  },
-  {
-    question: "What is the name of the Goa'uld who serves as the main villain during the final two seasons of SG1?",
-    choices: ["Zeus", "Seth", "Horus", "Ba'al"],
-    answer: 3
-  },
-  {
-    question: "What is the name of the organization that oversees Stargate Command and the SG teams?",
-    choices: ["Minipax", "The FBI", "The IOA", "DoE"],
-    answer: 2
-  },
-  {
-    question: "What is the name of the device that allows SG1 to dial the Stargate to other planets?",
-    choices: ["The Dial Home Device (DHD)", "The Holodeck", "The Tardis", "The DeLorean"],
-    answer: 0
-  }
-];
+    question: "What is the name of the SG1 team member who is an astrophysicist and serves as the main scientific advisor for the team?"
+  }]
 
 // Create questions object like array with hardQuestions
 
 const hardQuestions = [{
-    question: "What is the name of the episode where Daniel ascends to a higher plane of existence?",
+    answer: 0,    
     choices: ["Meridian", "Ascension", "The Fifth Race", "Surrender"],
-    answer: 0
+    question: "What is the name of the episode where Daniel ascends to a higher plane of existence?",
   },
   {
-    question: "What is the name of the planet where the SG1 team discovers the 'super-soldier' program?",
+    answer: 1,
     choices: ["P5S-117", "P9C-882", "P3X-666", "P60"],
-    answer: 1
+    question: "What is the name of the planet where the SG1 team discovers the 'super-soldier' program?",
   },
   {
-    question: "What is the name of the advanced technology that the Ori use to convert people to their religion?",
+    answer: 0,
     choices: ["The Priors' Staff", "The Book of Origin", "The Ark of Truth", "Wololo"],
-    answer: 0
+    question: "What is the name of the advanced technology that the Ori use to convert people to their religion?",
   },
   {
-    question: "What is the name of the episode where SG1 travels to an alternate universe where Earth is under attack by the Goa'uld?",
+    answer: 2,
     choices: ["Point of View", "Ripple Effect", "There But for the Grace of God", "Rise of the Cybermen"],
-    answer: 2
+    question: "What is the name of the episode where SG1 travels to an alternate universe where Earth is under attack by the Goa'uld?",
   },
   {
-    question: "What is the name of the planet where SG1 encounters the Re'tu, a race of beings that can possess human hosts?",
+    answer: 1,
     choices: ["P3X-593", "P2X-338", "P9C-882", "P45"],
-    answer: 1
+    question: "What is the name of the planet where SG1 encounters the Re'tu, a race of beings that can possess human hosts?",
   },
   {
-    question: "What is the name of the episode where SG1 travels back in time to ancient Egypt?",
+    answer: 0,
     choices: ["Moebius", "The Curse", "Forever in a Day", "Backwards"],
-    answer: 0
+    question: "What is the name of the episode where SG1 travels back in time to ancient Egypt?",
   },
   {
-    question: "What is the name of the episode where SG1 discovers a civilization that has created a virtual reality world?",
+    answer: 1,
     choices: ["The Gamekeeper", "Avatar", "Unending", "Endgame"],
-    answer: 1
+    question: "What is the name of the episode where SG1 discovers a civilization that has created a virtual reality world?",
   },
   {
-    question: "What is the name of the device that SG1 uses to interface with the Asgard's computer systems?",
+    answer: 0,
     choices: ["The Ancient Repository of Knowledge", "The Asgard Computer Core", "The Human-Machine Interface", "The Cortana Interface"],
-    answer: 0
+    question: "What is the name of the device that SG1 uses to interface with the Asgard's computer systems?",
   },
   {
-    question: "What is the name of the episode where SG1 must stop a rogue NID team from using the Stargate for personal gain?",
+    answer: 1,
     choices: ["Touchstone", "Shades of Grey", "Chain Reaction", "Lower Decks"],
-    answer: 1
+    question: "What is the name of the episode where SG1 must stop a rogue NID team from using the Stargate for personal gain?",
   },
   {
-    question: "What is the name of the Goa'uld who is responsible for the destruction of the planet Abydos?",
+    answer: 2,
     choices: ["Sokar", "Hathor", "Anubis", "Seth"],
-    answer: 2
+    question: "What is the name of the Goa'uld who is responsible for the destruction of the planet Abydos?",
   },
   {
-    question: "What is the name of the episode where SG1 teams up with the Jaffa rebellion to destroy a Goa'uld mothership?",
+    answer: 0,
     choices: ["The Serpent's Venom", "Exodus", "Full Circle", "Revenge is Sweet"],
-    answer: 0
+    question: "What is the name of the episode where SG1 teams up with the Jaffa rebellion to destroy a Goa'uld mothership?",
   },
   {
-    question: "What is the name of the episode where SG1 teams up with the Tok'ra to rescue Jacob Carter from a Goa'uld extraction ceremony?",
+    answer: 0,
     choices: ["The Devil You Know", "Divide and Conquer", "Tangent", "No Man Left Behind"],
-    answer: 0
+    question: "What is the name of the episode where SG1 teams up with the Tok'ra to rescue Jacob Carter from a Goa'uld extraction ceremony?",
   },
   {
-    question: "What is the name of the episode where SG1 investigates a planet where the inhabitants believe that they are all living in a virtual reality?",
+    answer: 1,
     choices: ["The Gamekeeper", "Avatar", "Unending", "To Boldly Go"],
-    answer: 1
-  }
-];
-
+    question: "What is the name of the episode where SG1 investigates a planet where the inhabitants believe that they are all living in a virtual reality?",
+  }]
 
 // Global Variables
 
@@ -206,7 +183,7 @@ function startGame() {
 }
 
 function runSteps(steps) {
-  steps.forEach(step => step());
+  steps.forEach((step) => step());
 }
 
 // Hide the menu buttons in game are
@@ -304,7 +281,7 @@ function displayEasyQuestion() {
     choiceLi.appendChild(answerBtn);
     choiceElement.appendChild(choiceLi);
   });
-};
+}
 
 // randomize Hard Questions
 
@@ -323,7 +300,7 @@ function displayHardQuestion() {
     // Create new button
     let answerBtn = document.createElement("button");
     // Change newButtons text content to randomHardQuestion.textContent choice
-    answerBtn.classList.add("btn-warning")
+    answerBtn.classList.add("btn-warning");
     answerBtn.textContent = choice;
     answerBtn.addEventListener("click", () => {
       // Check choices.choice index matches answer
@@ -356,7 +333,7 @@ function displayHardQuestion() {
     choiceLi.appendChild(answerBtn);
     choiceElement.appendChild(choiceLi);
   });
-};
+}
 
 // Display the scoreboard
 
