@@ -28,7 +28,7 @@ As a first time user:
 As a returning user:
 
 - I want the questions to be varied.
-- I want to be informed when I get an answer wrong, and what the right answer is.
+- *I want to be informed when I get an answer wrong, and what the right answer is.*
 - I want to keep track of my score on each game.
 - I want to be able to jump straight in to playing.
 - I want to be able to reset the questions.
@@ -51,13 +51,14 @@ Keeping in the theme of Stargate, I have opted for a font that, in my opinion, b
 
 Representing both the Goa'uld (specifically the uniforms and ships) and the Tauri(uniforms and Stargate command), I have chosen the below colours. 
 
-<img src="assets/images/coolors.png" width="50%" height="50%">
+<img src="assets/docs/coolors.png" width="50%" height="50%">
 
 3. **Imagery** 
 
-Most of the imagery has been used, will have a sci-fi element to it. The Chappa'ai(Stargate) will be a prominent image on the quiz app/site.
+Most of the imagery is used, will have a sci-fi element to it. The Chappa'ai(Stargate) will be a prominent image on the quiz app/site.
 
-Edit: At the project's outset, I made the conscious decision to avoid incorporating any images that might be subject to copyright infringement. Consequently, I opted to employ a background image from Unsplash and placed a solitary Stargate logo at the screen's apex.  
+Edit: At the project's outset, I made the conscious decision to avoid incorporating any images that might be subject to copyright infringement. Consequently, I opted to employ a background image from NASA's twitter feed and placed a solitary Stargate logo at the screen's apex.  
+
 
 4. **Wireframes** 
 
@@ -88,7 +89,6 @@ The wireframes that you see below were created using Balsamiq.
 ## Technologies Used
 
 * [Balsamiq](https://balsamiq.com/) - for creating the wireframes.
-* [Unsplash](https://unsplash.com/) - the background image that is used on the site.
 * [VSCode](https://code.visualstudio.com/) - I'd hit my quota for the month so had to revert to using VSCode, downloading the repo to my HD and editing on my laptop/desktop.
 * [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) - used to debug code, useful for grid/flex learning.
 * [Google Chrome](https://www.google.com/chrome/) - used to identify different issues that appear in different browsers.
@@ -97,7 +97,62 @@ The wireframes that you see below were created using Balsamiq.
 * [Bootstrap](https://getbootstrap.com/) - I used the Bootstrap(4.6) framework to enable synchronicity across the site, and also mobile first design.
 * [W3Schools](https://www.w3schools.com/) - used to research JavaScript methods.
 * [MDN](https://developer.mozilla.org/) - also used to research.
-
+* [Git](https://git-scm.com/) - version control software used to keep track of changes.
+* [GitHub](https://github.com/) - used to store repositories
+* [Gitpod](https://www.gitpod.io/) - a cloud based IDE used to develop my MS2.
+* [JSHint](https://www.jshint.com/) - JavaScript code quality tool.
+* [Gimp](https://www.gimp.org/) - Photo manipulation tool used for batch resizing images.
+* [BIMP](https://alessandrofrancesconi.it/projects/bimp/) - Plugin for GIMP to allow batch resizing.
 
 ## Testing
 
+### Table Of Contents
+- [Code Validation](#)
+
+## Code Validation
+
+Each page produced by myself has been ran through W3C HTML & CSS Checkers and found no errors. JS was ran through JSHint to validate/check code.
+       
+| Language | URLS | Evidence |
+| -------- | -------- | -------- |
+| HTML     | Deployed Site Results W3C | [W3C HTML Validation PDF](assets/docs/w3chtmlvalid.pdf "W3C Valid HTML PDF") |
+| CSS      | Deployed Site Results W3C | [W3C CSS Validation PDF](assets/docs/w3cvalidcss.pdf "W3C Valid CSS PDF") |
+| JS       |          | <img src="assets/docs/jshint.png"> |
+
+## Responsive Testing
+
+In the below table, I have added screenshots of each resolution, at each point in the game. There was no artifacts or bugs that were detected visually or via DevTools.
+
+| Device   | Landing Page                                      | Quiz Page                                          | Scores Page                                        | Comments |
+| -------- | ------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------- |
+| Mobile   | ![Landing Page for Mobile](assets/docs/images/landing_mobile.jpg)| ![Landing Page for Mobile](assets/docs/images/quiz_mobile.jpg) | ![Scores Page for Mobile](assets/docs/images/scores_mobile.jpg)                   |Each page displays as it should with no visible artifacts or issues. These were all tested at a resolution of 320px and above.          |
+| Tablet   | ![Landing Page for Tablet](assets/docs/images/landing_tablet.jpg)     | ![Quiz Page for Tablet](assets/docs/images/quiz_tablet.jpg)           | ![Scores Page for Tablet](assets/docs/images/scores_tablet.jpg)       |Each page displays as it should with no visible artifacts or issues. These were all tested at a resolution of 768px and above.          |
+| Desktop  | ![Landing Page for Desktop](assets/docs/images/landing_desktop.jpg)   | ![Quiz Page for Desktop](assets/docs/images/quiz_desktop.jpg)         | ![Scores Page for Desktop](assets/docs/images/scores_desktop.jpg)     |Each page displays as it should with no visible artifacts or issues. These were all tested at a resolution of 1024px and above.          |
+
+
+
+## Functional Testing
+
+| Test Case | Description | Test Steps | Expected Result | Actual Result | Pass/Fail |
+| --- | --- | --- | --- | --- | --- |
+| Start Quiz | Does the game start correctly| 1. Click Start Quiz Button <br> 2. JS populates the questions<br>3. User answers the question. <br> 4. Receive interaction feedback | User is able to start the quiz, read the random question displayed and choose an answer. All within a time limit of 30 seconds. | PASS | PASS   |
+| Difficulty Toggle | Test Difficulty Toggle | 1. Click Easy Mode Toggle <br> 2. Click Start Quiz <br> | User is successfully able to select a question set. | PASS | PASS   |
+| Instructions | Test the modal on the website | 1. Click the Instructions button <br> 2. Close the intructions modal| Instructions Modal shows how instructions on how to play the game. Closes when X is clicked. | PASS | PASS   |
+| Picking an Answer | Test if user can select correct answers | 1. Select an answer <br> 2. Receive interaction feedback <br> 3. Repeat process until time runs out <br>  | User is able to select wrong and right answers. User is also able to select multiple answers which is not intended | PASS | FAIL   |
+| Reset The Game | Test the reset button on gameHud and scoreboard | 1. Click the reset button <br> 2. Select option to start or change difficulty <br> 3. Start the game again <br>  | User can successfully use the reset button on both gameHud and scoreboard screens.| PASS | PASS|
+| Social Media Icons | Test if icons work correctly | 1. Click each icon <br> 2. Verify that they open in new window <br>  | User can successfully go through to social media sites.| PASS | PASS|
+
+
+
+
+## Future Implementations
+
+In the Milestone I was unable to implement the below features:- 
+- On selecting an incorrect answer, the correct answer was supposed to flash green. I was able to get the answer to stay on the screen for approximately a second but unable to figure out how to do both at the same time. This is something I will work on in my spare time to ensure that I can get a solution everytime.
+  
+
+## Credits 
+
+* [Nasa Twitter Feed](https://twitter.com/NASA/status/677577837038186497/) - the background image that is used on the site.
+* Ricardo Matos, Callum Jones & Razvan Joitescu - for sharing input and their ideas. 
+* My family for being extremely patient with me.
