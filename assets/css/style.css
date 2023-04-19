@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap');
 
 body {
-  background-image: url('../images/milkyway.jpg');
+  background-image: url('../images/milkyway.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -21,7 +21,8 @@ body {
 /* Header Area */
 
 .header-logo img {
-  max-height: 100px;
+  height: 100px;
+  width: 100px;
 }
 
 .sg-heading {
@@ -125,6 +126,11 @@ footer a {
 footer a:hover {
   color:#e2ac16;
 }
+
+footer a:focus {
+  color:#e2ac16;
+}
+
 .social-icons {
   min-height: 30px;
   color: white;
