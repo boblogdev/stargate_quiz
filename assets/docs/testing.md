@@ -2,8 +2,13 @@
 
 ### Table Of Contents
 - [Code Validation](#code-validation)
+- [Browser Testing](#browser-testing)
 - [Responsive Testing](#responsive-testing)
 - [Lighthouse Results](#lighthouse-test-results)
+- [Functional Testing](#functional-testing)
+- [Bug Tracker](#bug-tracker)
+    - [Open Bugs](#open-bugs)
+    - [Resolved Bugs](#resolved-bugs)
 
 ## Code Validation
 
@@ -15,9 +20,24 @@ Each page produced by myself has been ran through W3C HTML & CSS Checkers and fo
 | CSS      | Deployed Site Results W3C | [W3C CSS Validation PDF](w3cvalidcss.pdf "W3C Valid CSS PDF") |
 | JS       |          | <img src="images/jshint.jpg"> |
 
+## Browser Testing
+
+I manually tested the browsers below performing the same actions such as:- 
+- Manually resizing each browser window and looking for any unexpected changes at specific breakpoints(320px , 768px and 1024px)
+- Walking through the steps found in the functional testing table to establish any code issues.
+
+| Browser | Responsive All Sizes  | URL to Screenshot | 
+| ---- | -------- | ------------------|
+| Opera|  PASS    |<img src="images/opera_desktop.png" height="200px">        | [Opera Screenshot](images/opera_desktop.png "Opera Desktop") |
+| Edge |   PASS    |<img src="images/microsoft_edge.png" height="200px">          | [Edge Screenshot](images/microsoft_edge.png "Edge Desktop") |
+| Firefox Developer | PASS  | <img src="images/firefox_developer.png" height="200px">         | [Firefox Screenshot](images/firefox_developer.png "Firefox Desktop") |
+| Chrome   | PASS    | <img src="images/google_chrome.png" height="200px">      |       [Chrome Screenshot](images/google_chrome.png "Chrome Desktop") |
+| Combination of Browsers |PASS| <img src="images/opera_edge_chrome_ffdev.png" height="200px">      |       [Combination of Browsers](images/opera_edge_chrome_ffdev.png "Opera, Edge, FF Dev, Chrome Screenshot") |
+Other than what is detailed in the [Bug Tracker](#bug-tracker) there was no additional issues.
+
 ## Responsive Testing
 
-In the below table, I have added screenshots of each resolution, at each point in the game. There was no artifacts or bugs that were detected visually or via DevTools.
+In the below table, I have added screenshots of each resolution, at each point in the game. There was no artifacts or bugs that were detected visually or via DevTools. I resized the window to the most common breakpoints to test if the site was truely responsive.
 
 | Device   | Landing Page                                      | Quiz Page                                          | Scores Page                                        | Comments |
 | -------- | ------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------- |
@@ -51,3 +71,13 @@ The following is the result of the automated testing conducted in Lighthouse for
 | Reset The Game | Test the reset button on gameHud and scoreboard | 1. Click the reset button <br> 2. Select option to start or change difficulty <br> 3. Start the game again <br>  | User can successfully use the reset button on both gameHud and scoreboard screens.| PASS | PASS|
 | Social Media Icons | Test if icons work correctly | 1. Click each icon <br> 2. Verify that they open in new window <br>  | User can successfully go through to social media sites.| PASS | PASS|
 
+## Bug Tracker
+
+### Open Bugs
+- [ ] Timer element doesn't display as soon as loading into the game.
+- [ ] User is able to click more than one answer
+- [ ] Clicking in quick successions results in answers skipping.
+- [ ] When selecting an incorrect answer, the correct answer should flash.
+- [ ] Some of the questions/answers are repeating due to the way they are called.
+
+### Resolved Bugs
