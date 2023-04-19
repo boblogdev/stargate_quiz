@@ -8,12 +8,32 @@ The site comprises a single page that displays certain elements at specific junc
 
 ## Table of Contents: 
 
-- [User Experience](#)
-    - [User Stories](#)
-    - [User Design](#)
-       
-
+- [User Experience]()
+    - [Client Goals](#client-goals)
+    - [User Stories](#user-stories)
+- [Design](#design)
+    - [Font](#font)
+    - [Colours](#colours)
+    - [Imagery](#imagery)
+    - [Wireframes](#wireframes)
+    - [Structure](#structure)
+- [Languages Used](#languages-used)
+- [Technologies Used](#technologies-used)
+- [Testing.md](#testing)
+- [Future Implementations](#future-implementations)
+- [Credits](#credits)
+- [My Final Thoughts](#my-final-thoughts)
+    
 ## User Experience
+
+### Client Goals
+
+As the client, my goal for this website is to achieve a functional quiz that works well and provides a good user experience, as well as an aesthetically pleasing and responsive design that is easy to navigate and use.
+
+- Functional quiz: The client's goal is to have a quiz on the website that works correctly and provides a good user experience.
+- Aesthetically pleasing: The client's goal is to have a website that looks attractive and visually appealing to users.
+- Responsive: The client's goal is to have a website that works well on all devices, including desktops, tablets, and smartphones.
+- Intuitive: The client's goal is to have a website that is easy to navigate and use, even for users who are not familiar with the site.
 
 ### User Stories
 
@@ -39,28 +59,30 @@ As a frequent user:
 - I want the game to be timed questions.
 - I want to be able to view social media for other games/quizzes.
 
-### Design
+## Design
 
 To create the quiz game, I plan to develop a single-page layout that will include instructions and a FAQ section, displayed via a modal created with the Bootstrap framework. Since the quiz will be centered around Stargate SG1, I believe it's fitting to incorporate a theme that reflects the main factions from the series, such as the Goa'uld and the Tauri.
 
-1. **Font**
+###  Font
 
 Keeping in the theme of Stargate, I have opted for a font that, in my opinion, bears resemblance to the primary title font used in the television series. I've made the choice of utilizing the [Lora](https://fonts.google.com/specimen/Lora?preview.text=stargate&preview.text_type=custom) Google font, with backup fonts of Georgia and serif. Font-weights are to include regular(400) & medium(500). I haven't picked a bold font as the weight of the font pushes the visual away from the original SG1 heading.
 
-2. **Colours**
+### Colours
 
 Representing both the Goa'uld (specifically the uniforms and ships) and the Tauri(uniforms and Stargate command), I have chosen the below colours. 
 
-<img src="assets/docs/coolors.png" width="50%" height="50%">
+<img src="assets/docs/images/coolors.jpg" width="50%" height="50%">
 
-3. **Imagery** 
+*Edit: In the end, I only used one of these colors, and instead relied on the background and Bootstrap buttons to create a visually appealing site.*
+
+### Imagery
 
 Most of the imagery is used, will have a sci-fi element to it. The Chappa'ai(Stargate) will be a prominent image on the quiz app/site.
 
-Edit: At the project's outset, I made the conscious decision to avoid incorporating any images that might be subject to copyright infringement. Consequently, I opted to employ a background image from NASA's twitter feed and placed a solitary Stargate logo at the screen's apex.  
+*Edit: At the project's outset, I made the conscious decision to avoid incorporating any images that might be subject to copyright infringement. Consequently, I opted to employ a background image from NASA's twitter feed and placed a solitary Stargate logo at the top of the screen.*
 
 
-4. **Wireframes** 
+### Wireframes
 
 The wireframes that you see below were created using Balsamiq.
 
@@ -78,6 +100,21 @@ The wireframes that you see below were created using Balsamiq.
 | ------- | ------- | ------- |
 | <img src="assets/docs/wireframes/tablet.png" width="200" height="150"> | <img src="assets/docs/wireframes/tablet_game.png" width="200" height="150"> | <img src="assets/docs/wireframes/tablet_faq.png" width="200" height="150"> |
 |         |         |         |
+
+### Structure
+
+The landing page is composed of several elements. At the top of the screen, there is a home button/symbol followed by a heading that reads 'Stargate Quiz,' with a slogan/ tagline underneath that says 'Do you dare challenge the Goa'uld?<br>
+<img src="assets/docs/images/home_logo.png">
+
+Below this is the game area, which includes the game buttons, a timer, questions, and a reset game button. The timer, questions and reset game button aren't visible until the game has started.<br>
+<img src="assets/docs/images/game_area_buttons.png">
+
+The instructions button opens a modal which explains how to use/play the game. The code used was modified from the Bootstrap Modal code.<br>
+<img src="assets/docs/images/instructions_modal.png">
+
+Finally, at the bottom of the page, there is a footer that features social icons created using the Font Awesome icon library.<br>
+<img src="assets/docs/images/social_media_icons.png">
+
 
 
 ## Languages Used
@@ -106,53 +143,26 @@ The wireframes that you see below were created using Balsamiq.
 
 ## Testing
 
-### Table Of Contents
-- [Code Validation](#)
-
-## Code Validation
-
-Each page produced by myself has been ran through W3C HTML & CSS Checkers and found no errors. JS was ran through JSHint to validate/check code.
-       
-| Language | URLS | Evidence |
-| -------- | -------- | -------- |
-| HTML     | Deployed Site Results W3C | [W3C HTML Validation PDF](assets/docs/w3chtmlvalid.pdf "W3C Valid HTML PDF") |
-| CSS      | Deployed Site Results W3C | [W3C CSS Validation PDF](assets/docs/w3cvalidcss.pdf "W3C Valid CSS PDF") |
-| JS       |          | <img src="assets/docs/jshint.png"> |
-
-## Responsive Testing
-
-In the below table, I have added screenshots of each resolution, at each point in the game. There was no artifacts or bugs that were detected visually or via DevTools.
-
-| Device   | Landing Page                                      | Quiz Page                                          | Scores Page                                        | Comments |
-| -------- | ------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------- |
-| Mobile   | ![Landing Page for Mobile](assets/docs/images/landing_mobile.jpg)| ![Landing Page for Mobile](assets/docs/images/quiz_mobile.jpg) | ![Scores Page for Mobile](assets/docs/images/scores_mobile.jpg)                   |Each page displays as it should with no visible artifacts or issues. These were all tested at a resolution of 320px and above.          |
-| Tablet   | ![Landing Page for Tablet](assets/docs/images/landing_tablet.jpg)     | ![Quiz Page for Tablet](assets/docs/images/quiz_tablet.jpg)           | ![Scores Page for Tablet](assets/docs/images/scores_tablet.jpg)       |Each page displays as it should with no visible artifacts or issues. These were all tested at a resolution of 768px and above.          |
-| Desktop  | ![Landing Page for Desktop](assets/docs/images/landing_desktop.jpg)   | ![Quiz Page for Desktop](assets/docs/images/quiz_desktop.jpg)         | ![Scores Page for Desktop](assets/docs/images/scores_desktop.jpg)     |Each page displays as it should with no visible artifacts or issues. These were all tested at a resolution of 1024px and above.          |
-
-
-
-## Functional Testing
-
-| Test Case | Description | Test Steps | Expected Result | Actual Result | Pass/Fail |
-| --- | --- | --- | --- | --- | --- |
-| Start Quiz | Does the game start correctly| 1. Click Start Quiz Button <br> 2. JS populates the questions<br>3. User answers the question. <br> 4. Receive interaction feedback | User is able to start the quiz, read the random question displayed and choose an answer. All within a time limit of 30 seconds. | PASS | PASS   |
-| Difficulty Toggle | Test Difficulty Toggle | 1. Click Easy Mode Toggle <br> 2. Click Start Quiz <br> | User is successfully able to select a question set. | PASS | PASS   |
-| Instructions | Test the modal on the website | 1. Click the Instructions button <br> 2. Close the intructions modal| Instructions Modal shows how instructions on how to play the game. Closes when X is clicked. | PASS | PASS   |
-| Picking an Answer | Test if user can select correct answers | 1. Select an answer <br> 2. Receive interaction feedback <br> 3. Repeat process until time runs out <br>  | User is able to select wrong and right answers. User is also able to select multiple answers which is not intended | PASS | FAIL   |
-| Reset The Game | Test the reset button on gameHud and scoreboard | 1. Click the reset button <br> 2. Select option to start or change difficulty <br> 3. Start the game again <br>  | User can successfully use the reset button on both gameHud and scoreboard screens.| PASS | PASS|
-| Social Media Icons | Test if icons work correctly | 1. Click each icon <br> 2. Verify that they open in new window <br>  | User can successfully go through to social media sites.| PASS | PASS|
-
-
-
+Please click the link to view my [testing.md](assets/docs/testing.md)
 
 ## Future Implementations
 
 In the Milestone I was unable to implement the below features:- 
 - On selecting an incorrect answer, the correct answer was supposed to flash green. I was able to get the answer to stay on the screen for approximately a second but unable to figure out how to do both at the same time. This is something I will work on in my spare time to ensure that I can get a solution everytime.
-  
 
+- I would like to be able to implement an API to obtain a wider range of questions.
+- Possibly the ability to create your own quizzes so that they can be sent to friends.
+  
 ## Credits 
 
 * [Nasa Twitter Feed](https://twitter.com/NASA/status/677577837038186497/) - the background image that is used on the site.
 * Ricardo Matos, Callum Jones & Razvan Joitescu - for sharing input and their ideas. 
 * My family for being extremely patient with me.
+
+## My Final Thoughts
+
+The site as a whole could have been a lot better on my part, specifically the JavaScript. Although the site functions(almost) as intended and fits the client goals/user goals, it is relatively simple and straight to the point. 
+
+I feel as though I still have an enormous amount to learn in the JS side of the journey but aI can only do this via practice. 
+
+Juan de Avila - "La práctica hace al maestro"
