@@ -144,6 +144,7 @@ Finally, at the bottom of the page, there is a footer that features social icons
 * [JSHint](https://www.jshint.com/) - JavaScript code quality tool.
 * [Gimp](https://www.gimp.org/) - Photo manipulation tool used for batch resizing images.
 * [BIMP](https://alessandrofrancesconi.it/projects/bimp/) - Plugin for GIMP to allow batch resizing.
+* [Coolors](https://coolors.co/) - Color pallette ideas.
 
 ## Testing
 
@@ -202,6 +203,9 @@ Cloning a repo will create a copy that continues to synchronize with the cloned 
 * Brad Wright & Robert C Cooper for creating an awesome TV series. 
 * Ricardo Matos, Callum Jones & Razvan Joitescu - for sharing input and their ideas. 
 * My family for being extremely patient with me.
+* W3Schools -  their explanation of concepts helped me get this far.
+* MDN - the holy grail of documentation.
+
 
 ## My Final Thoughts
 
