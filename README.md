@@ -187,19 +187,19 @@ Forking is different to cloning a repo. Fork will create a copy of the repo in y
 Cloning a repo will create a copy that continues to synchronize with the cloned repository. I used this method when I lost Gitpod hours allowing me to continue the work on my local machine.
 
 
-1. You can fork the repository to your own Github. 
-2. Navigate to the repository that you wish to fork.
-3. In the top right of the screen click the fork button.
-4. Github by default sets the forked repository name to the original owners repository name.
-5. You can set a description if you wish. 
-6. Select the branches you wish to copy, in this case, it is main.
-7. Select create fork.
-8. Github will create a copy of the fork in your account.
+### VSCode Clone
+1. You can clone the repo from the terminal inside VSCode
+2. Open the terminal.
+3. Type git clone *paste the url of the repo* you wish to clone. The url can be found on Github in the address bar or in the green code button with options for HTTPS, SSH and GitHub CLI.
+4. Press enter to create the clone.
+5. VSCode might ask you define username and email in the config files.
+
 
 
 ## Credits 
 
 * [Nasa Twitter Feed](https://twitter.com/NASA/status/677577837038186497/) - the background image that is used on the site.
+* Brad Wright & Robert C Cooper for creating an awesome TV series. 
 * Ricardo Matos, Callum Jones & Razvan Joitescu - for sharing input and their ideas. 
 * My family for being extremely patient with me.
 
