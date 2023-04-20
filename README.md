@@ -1,4 +1,7 @@
 # Stargate SG-1 Quiz
+<img src="assets/docs/images/amiresponsive.png">
+
+ [Stargate Quiz can be played here](https://boblogdev.github.io/stargate_quiz/index.html)
 
 For my milestone project, I have chosen to create a quiz game focused on Stargate SG1 TV Series. 
 
@@ -125,7 +128,7 @@ Finally, at the bottom of the page, there is a footer that features social icons
 * JavaScript - used to add interactivity to the quiz such as user feedback on correctly answered questions.
 
 ## Technologies Used
-
+* [amiresponsive](https://ui.dev/amiresponsive) - created the snapshot at the top of README.md
 * [Balsamiq](https://balsamiq.com/) - for creating the wireframes.
 * [VSCode](https://code.visualstudio.com/) - I'd hit my quota for the month so had to revert to using VSCode, downloading the repo to my HD and editing on my laptop/desktop.
 * [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) - used to debug code, useful for grid/flex learning.
@@ -158,7 +161,7 @@ In the Milestone I was unable to implement the below features:-
 
 ### To deploy a site to GitPages
 
-[Link to Deployed Site](https://boblogdev.github.io/milestone_two/) 
+[Link to Deployed Site](https://boblogdev.github.io/stargate_quiz/) 
 
 1. Navigate to the repository on the Github website that you want to deploy.
 2. Once inside the repository, select the settings option from the menu.
@@ -166,6 +169,32 @@ In the Milestone I was unable to implement the below features:-
 4. Select "Deploy from a branch" inside the source dropdown.
 5. From the branch section, select the main branch and /root.
 6. Select Save.
+
+## Forking the repo
+
+Forking is different to cloning a repo. Fork will create a copy of the repo in your account allowing you to make alterations, often used in Open Source development.
+
+1. You can fork the repository to your own Github. 
+2. Navigate to the repository that you wish to fork.
+3. In the top right of the screen click the fork button.
+4. Github by default sets the forked repository name to the original owners repository name.
+5. You can set a description if you wish. 
+6. Select the branches you wish to copy, in this case, it is main.
+7. Select create fork.
+8. Github will create a copy of the fork in your account.
+
+## Cloning the repo
+Cloning a repo will create a copy that continues to synchronize with the cloned repository. I used this method when I lost Gitpod hours allowing me to continue the work on my local machine.
+
+
+1. You can fork the repository to your own Github. 
+2. Navigate to the repository that you wish to fork.
+3. In the top right of the screen click the fork button.
+4. Github by default sets the forked repository name to the original owners repository name.
+5. You can set a description if you wish. 
+6. Select the branches you wish to copy, in this case, it is main.
+7. Select create fork.
+8. Github will create a copy of the fork in your account.
 
 
 ## Credits 
