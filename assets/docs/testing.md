@@ -1,5 +1,7 @@
 # Testing
 
+Back to [README.md](../../README.md).
+
 ## Table Of Contents
 - [Code Validation](#code-validation)
 - [Browser Testing](#browser-testing)
@@ -112,6 +114,12 @@ I don't quite understand how to fit the correct answer flash into the game at th
 | I want the game to be timed questions. | Ok   | Timer at the top of the game counts down from 30 seconds |
 | I want to be able to view social media for other games/quizzes. | Ok  |       User can select any icon from the footer to view social media sites.|
 
+### Testing Methods Used
+
+- Manual Testing 
+    - I relied heavily on manual testing for the majority of my JS. This involved passing variables/functions as arguments to the console.log method.
+
+
 ### Bug Tracker
 
 ### Open Bugs
@@ -123,9 +131,15 @@ I don't quite understand how to fit the correct answer flash into the game at th
 
 ### Resolved Bugs
 
+- [x] Due to the answer being indexed beyond the actual length of the choices, some responses were being displayed incorrectly and without a valid answer. This was fixed for both easy and hard question sets.
+
+- [x] Originally, the gray overlay I applied to the background only covered the viewport height, which was unintended. As a result, the overlay was modified to extend to 100% of the screen.
+
 
 ### Other Issues
 
 After transitioning from using the Cloud IDE Gitpod to Code Anywhere, I decided to clone my repository to my local device. 
 
 However, I encountered an issue where the global configurations for VSCode on my device were not set up correctly because of a previous(I own) GitHub account that was logged in. This has resulted in the appearance of two contributors to the code, when in reality there was only one. I have acknowledged this in my commits.
+
+

@@ -1,4 +1,4 @@
-# Milestone Project 2
+# Stargate SG-1 Quiz
 
 For my milestone project, I have chosen to create a quiz game focused on Stargate SG1 TV Series. 
 
@@ -21,6 +21,7 @@ The site comprises a single page that displays certain elements at specific junc
 - [Technologies Used](#technologies-used)
 - [Testing.md](#testing)
 - [Future Implementations](#future-implementations)
+- [Git Pages Deployment](#git-pages-deployment)
 - [Credits](#credits)
 - [My Final Thoughts](#my-final-thoughts)
     
@@ -153,6 +154,20 @@ In the Milestone I was unable to implement the below features:-
 - I would like to be able to implement an API to obtain a wider range of questions.
 - Possibly the ability to create your own quizzes so that they can be sent to friends.
   
+## Git Pages Deployment
+
+### To deploy a site to GitPages
+
+[Link to Deployed Site](https://boblogdev.github.io/milestone_two/) 
+
+1. Navigate to the repository on the Github website that you want to deploy.
+2. Once inside the repository, select the settings option from the menu.
+3. On the left side, select pages.
+4. Select "Deploy from a branch" inside the source dropdown.
+5. From the branch section, select the main branch and /root.
+6. Select Save.
+
+
 ## Credits 
 
 * [Nasa Twitter Feed](https://twitter.com/NASA/status/677577837038186497/) - the background image that is used on the site.
