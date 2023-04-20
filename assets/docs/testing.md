@@ -74,6 +74,10 @@ The following is the result of the automated testing conducted in Lighthouse for
 The following is the result of the automated testing conducted in Lighthouse for the Mobile version of the website:
 ![Lighthouse Desktop Results](./images/lh_test_results_mobile.webp "Lighthouse Test Results")
 
+An interesting note on the Lighthouse Testing. I tested this locally using VSCode IDE and a Python3 -m http.server. 
+
+Whilst hosted locally the scores were slightly worse than hosted via Git Pages. There alot of factors that come into this however(Google even tells us this) I still thought it would be quicker locally.
+
 
 ### Functional Testing
 
@@ -141,5 +145,3 @@ I don't quite understand how to fit the correct answer flash into the game at th
 After transitioning from using the Cloud IDE Gitpod to Code Anywhere, I decided to clone my repository to my local device. 
 
 However, I encountered an issue where the global configurations for VSCode on my device were not set up correctly because of a previous(I own) GitHub account that was logged in. This has resulted in the appearance of two contributors to the code, when in reality there was only one. I have acknowledged this in my commits.
-
-
